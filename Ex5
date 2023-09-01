@@ -1,0 +1,45 @@
+/*Criar um algoritmo que armazene cinco nomes em um vetor e depois possa ser digitado um nome e, se
+for encontrado, imprimir a posição desse nome no vetor; caso contrário, imprimir uma mensagem.*/
+
+
+#include <stdio.h>
+#include <locale.h>
+
+main()
+
+{
+
+    setlocale(LC_ALL, "portuguese");
+    int i;
+    char Nome[5][10], N2[10];
+
+
+    for(i=0; i<5; i++)
+    {
+        printf("Digite um nome\n");
+        gets(Nome[i]);
+
+    }
+
+    printf("Agora digite um nome denovo\n");
+    scanf("%s", N2);
+
+    for(i=0; i<5; i++)
+    {
+
+               if(strcmp(N2, Nome[i]) == 0)
+                {printf("Posição %d", i);}
+
+                else if(strcmp(N2, Nome[i]) != 0)
+                {
+                printf("Não deu certo");
+                    break;
+                }
+
+
+
+    }
+
+
+
+}
