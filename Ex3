@@ -1,0 +1,64 @@
+/*Implemente um programa que simule o jogo do Bingo. Deve gerar sucessivamente números aleatórios
+compreendidos entre 1 e 90 até que o utilizador digite a palavra BINGO. Para facilitar a verificação do
+cartão premiado, após o sorteio de um novo número deve apresentar a lista ordenada de todos os números
+já sorteados.
+Sugestão: para melhorar a eficiência do seu programa, tire partido do fato de que quando um novo número
+é sorteado a lista dos anteriores já se encontra ordenada
+*/
+
+
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <time.h>
+
+main()
+
+{
+    srand(time(NULL));
+    setlocale(LC_ALL, "portuguese");
+
+    int i, numero[10], cop=0, j, r, k;
+    char P[10][6];
+
+    printf("Quando completar o cartão premiado digite 'BINGO'\n");
+
+    for(i=0; i<10; i++)
+    {
+        numero[i] = rand() % (90) + 1;
+        printf("Novo número: %d\n", numero[i]);
+
+
+
+        for(j= 0 ; j< i; j++)
+        {for(k=j+1; k<i; k++)
+            {
+
+                if( numero[j] > numero[k] )
+                    { cop = numero[j];
+                    numero[j] = numero[k];
+                    numero[k] = cop;
+                    }
+            }}
+
+         printf("Números já sorteados:");
+
+         for(j = 0; j <= i; j++)
+         {printf(" %d ", numero[j]);}
+
+         printf("\n");
+
+        gets(P[i]);
+
+        if( strcmp (P[i],"BINGO") == 0 )
+        {
+            printf("\nVocê ganhou!");
+            break;
+        }
+
+    }
+
+
+
+
+}
