@@ -10,7 +10,7 @@ main()
 {
 
     setlocale(LC_ALL, "portuguese");
-    int i;
+    int i, k=0;
     char Nome[5][10], N2[10];
 
 
@@ -26,20 +26,16 @@ main()
 
     for(i=0; i<5; i++)
     {
-
                if(strcmp(N2, Nome[i]) == 0)
-                {printf("Posição %d", i);}
-
-                else if(strcmp(N2, Nome[i]) != 0)
-                {
-                printf("Não deu certo");
-                    break;
+                {printf("Posição %d  ", i + 1);
                 }
-
-
+                else
+                    k++;
 
     }
 
+     if(k==5)
+        printf("O nome não foi encontrado no vetor");
 
 
 }
