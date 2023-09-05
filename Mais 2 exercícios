@@ -1,0 +1,19 @@
+/*1-
+Uma agência espiã deseja enviar mensagens secretas para seus agentes, o código dessas mensagens é a substituição das vogais por números, sendo que as vogais A, E, I, O, U
+correspondem a 2 3 4 5 6 . Nesse código a frase "EU ESTOU NA AULA DE ICC" corresponde a frase: "36 3ST56 N2 26L2 DE 4CC".
+Faça um programna em C que receba uma frase e a codifica. a frase deve possuir no máximo 60 caracteres
+  
+  
+  2-
+  Dada uma string, composta por uma linha de texto, faça um programa que altera o estilo do texto invertendo as palavras da frase imitando o mestre jedi Yoda.
+  Por questões de simplicidade, vamos considerar apenas duas regras que funcionam para alguns casos particulares:
+   1-
+   Sentenças negativas: Reorganize a frase movendo o "not" para o final.
+   por exemplo: "I will not help you" se transforma em "I will help you not"
+
+   2-
+   Demais sentenças: Tome as duas primeiras palavras da frase, e coloque elas no final da frase:
+   por exemplo: "I will talk like Yoda" se transforma em "Talk like Yoda I will"  
+  */
+  
+  
