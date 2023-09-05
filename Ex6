@@ -1,0 +1,96 @@
+/*
+Criar um algoritmo que implemente o seguinte menu de opções:
+ Ler notas e nomes de 100 candidatos;
+ Exibir média geral de todos os candidatos;
+ Exibir uma lista com o nome e a nota de todos os candidatos em ordem decrescente de nota;
+ Ler um nome e buscar esse candidato imprimindo o nome e sua nota; caso não seja encontrado
+candidato com o nome lido, imprimir a mensagem “candidato não encontrado”
+*/
+
+
+#include<stdio.h>
+#include<locale.h>
+
+
+main()
+{
+
+    setlocale(LC_ALL, "portuguese");
+
+    int opt, armz=0, j;
+    int i ,n[3][3] ,media[3];
+    char N[3][20];
+
+    printf("Pressione 1 para ler notas e nomes de 100 candidatos\n");
+    printf("Pressione 2 para exibir media geral de todos os candidatos\n");
+    printf("Pressione 3 para exibir uma lista com o nome e a nota de todos os candidatos em ordem decrescente de nota\n");
+    printf("Pressione 4 para ler um nome e buscar esse candidato imprimindo o nome e sua nota\n");
+
+    scanf("%d", &opt);
+
+    switch(opt)
+    {
+        case 1:
+
+                for(i=0 ;i<3; i++)
+                {
+
+                    armz=0;
+                    for( j=0; j<3; j++)
+                    {printf("Digite sua nota\n");
+                    scanf("%d", &n[i][j]);
+
+
+                    armz=armz + n[i][j];
+
+                    }
+                    media[i] = armz/3;
+
+                    printf("Agora digite seu nome\n");
+                    scanf("%s", N[i]);
+
+                }
+
+                    printf("Pressione 2 para exibir media geral de todos os candidatos\n");
+                    printf("Pressione 3 para exibir uma lista com o nome e a nota de todos os candidatos em ordem decrescente de nota\n");
+                    printf("Pressione 4 para ler um nome e buscar esse candidato imprimindo o nome e sua nota\n");
+
+                    scanf("%d", &opt);
+
+                    switch (opt)
+
+                case 2:
+
+
+                    printf("A media total de todos os candidatos eh: \n ");
+                    for(i=0; i<3; i++)
+                    {
+
+
+                        printf("%d de ", media[i]);
+                        printf("%s\n", N[i]);
+
+                    }
+
+                    printf("Pressione 3 para exibir uma lista com o nome e a nota de todos os candidatos em ordem decrescente de nota\n");
+                    printf("Pressione 4 para ler um nome e buscar esse candidato imprimindo o nome e sua nota\n");
+
+                    scanf("%d", &opt);
+
+                    switch (opt)
+
+            case 3:
+                for(i=0; i<3; i++)
+                {
+                printf("%s", N[i]);
+
+
+
+
+
+    }
+
+}
+}
+
+
